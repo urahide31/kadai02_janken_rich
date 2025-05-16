@@ -1,0 +1,83 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+    width: 1400px;
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+/* p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+} */
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+.goalmouse{
+    background-image: url(../img/goal.jpeg);
+    background-repeat: no-repeat;
+    background-size: 1400px;
+    height: 750px;
+    padding-top: 240px;
+}
+
+.targetrow_up{
+    /* margin-top: 200px; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding-left: 200px;
+    padding-right: 220px;
+}
+
+.targetpanel{
+    width: 33.33%;
+    height: 180px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 80px;
+    background-color: white;
+    opacity: 0.4;
+    border: 2px solid red;
+}
+
+.targetrow_mid{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+    padding-left: 200px;
+    padding-right: 220px;
+    /* margin-bottom: 400px; */
+}

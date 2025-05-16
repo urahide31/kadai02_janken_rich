@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>おみくじ</title>
+</head>
+<body>
+
+<header>
+    <h1>おみくじ</h1>
+</header>
+
+<main>
+    <ul>
+        <li id="pull">おみくじを引く</li>
+    </ul>
+    <p id="echo"></p>
+</main>
+
+<footer>フッター</footer>
+<script>
+//定数定義
+const daikichi = '<img src="img/daikichi.jpg" width="200px" alt="大吉">';
+const chukichi = '<img src="img/chukichi.jpg" width="200px" alt="中吉">';
+const shokichi = '<img src="img/shokichi.jpg" width="200px" alt="小吉">';
+const kichi = '<img src="img/kichi.jpg" width="200px" alt="吉">';
+const kyou = '<img src="img/kyou.jpg" width="200px" alt="凶">';
+const suekichi = '<img src="img/suekichi.jpg" width="200px" alt="末吉">';
+const daikyou = '<img src="img/daikyou.jpg" width="200px" alt="大凶">';
+var view; //echo表示用
+$("#pull").on("click",function(){
+    const r = Math.ceil(Math.random()*7);
+    switch(r){
+        case 1:
+            view = daikichi;
+            break;
+        case 2:
+            view = chukichi;
+            break;
+        case 3:
+            view = shokichi;
+            break;
+        case 4:
+            view = kichi;
+            break;
+        case 5:
+            view = kyou;
+            break;
+        case 6:
+            view = suekichi;
+        break;
+        case 7:
+            view = daikyou;
+        break;
+    }
+    $("#echo").html(view).css("color","#FF0000");
+    // $("#echo").hide();
+    $("#echo").fadeIn(3000);
+});
+
+
+
+
+
+</script>
+</body>
+</html>

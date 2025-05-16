@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>PK</title>
+</head>
+<body>
+
+<header>
+  <h1>PK対決</h1>
+</header>
+
+<main>
+
+<div class="goalmouse">
+  <div class="targetrow_up">
+    <p class="targetpanel" id="place1">①</p>
+    <p class="targetpanel" id="place2">②</p>
+    <p class="targetpanel" id="place3">③</p>
+  </div>
+  <div class="targetrow_mid">
+    <p class="targetpanel" id="place4">④</p>
+    <p class="targetpanel" id="place5">⑤</p>
+    <p class="targetpanel" id="place6">⑥</p>
+  </div>
+  
+</div>
+</main>
+
+<footer></footer>
+<script>
+//変数・定数の定義
+const keeper = '<img src="img/keeper.png>"';
+let kicktarget;
+
+function settarget(p){
+  let r = Math.ceil(Math.random()*10);
+    if(r>9){
+      kicktarget = 0;
+    } else{
+      kicktarget = p;
+    }
+    // console.log(kicktarget);
+    return kicktarget;
+}
+
+//ゴールキーパーの守備位置を乱数でセット
+let pc_position = Math.ceil(Math.random()*6);
+
+//クリックイベントとってボールを蹴る位置を決める
+$("#place1").on("click",function(){
+  kicktarget = settarget(1);
+  console.log(kicktarget);
+})
+
+$("#place2").on("click",function(){
+  kicktarget = settarget(2);
+  console.log(kicktarget);
+})
+
+console.log(kicktarget);
+
+
+//ボールの絵を表示する
+
+
+
+//出た数に応じてキーパーの画像を表示させる位置を決める
+
+//ゴール決まったら画像出す
+
+//スコアボードにも点数出す
+
+
+
+    
+    
+    
+    
+    
+    
+    
+
+</script>
+</body>
+</html>
