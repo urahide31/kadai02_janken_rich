@@ -66,11 +66,17 @@ li:hover{
     height: 180px;
     margin-bottom: 0px;
     margin-top: 0px;
+    line-height: 180px;
     text-align: center;
     font-size: 80px;
     background-color: white;
     opacity: 0.4;
     border: 2px solid red;
+}
+
+
+.targetpanel:hover{
+    opacity: 0.8;
 }
 
 .targetrow_mid{
@@ -80,4 +86,21 @@ li:hover{
     padding-left: 200px;
     padding-right: 220px;
     /* margin-bottom: 400px; */
+}
+
+.result_area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.whitetext{
+    color: white;
 }

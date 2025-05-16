@@ -26,20 +26,35 @@
     <p class="targetpanel" id="place5">⑤</p>
     <p class="targetpanel" id="place6">⑥</p>
   </div>
-  
+  <div class = "result_area">
+    <div class="flex">
+      <p class="whitetext">キーパーの位置は・・・</p>
+      <p class="whitetext" id="GK_position"></p>
+    </div>
+    <div class="flex">
+      <p class="whitetext">ボールのゆくえは・・・</p>
+      <p class="whitetext" id="boal_position"></p>
+    </div>
+    <div class="flex">
+      <p class="whitetext">判定は・・・</p>
+      <p class="whitetext" id="result"></p>
+    </div>
+  </div>
 </div>
+
 </main>
 
 <footer></footer>
 <script>
 //変数・定数の定義
 const keeper = '<img src="img/keeper.png>"';
-let kicktarget;
+let kicktarget; //ける位置
+let result;
 
 function settarget(p){
   let r = Math.ceil(Math.random()*10);
     if(r>9){
-      kicktarget = 0;
+      kicktarget = "枠外";
     } else{
       kicktarget = p;
     }
@@ -47,21 +62,106 @@ function settarget(p){
     return kicktarget;
 }
 
-//ゴールキーパーの守備位置を乱数でセット
-let pc_position = Math.ceil(Math.random()*6);
+
 
 //クリックイベントとってボールを蹴る位置を決める
 $("#place1").on("click",function(){
+  //ゴールキーパーの守備位置を乱数でセット
+  let pc_position = Math.ceil(Math.random()*6);
   kicktarget = settarget(1);
-  console.log(kicktarget);
-})
+  if(kicktarget != pc_position && kicktarget !="枠外"){
+    result = "goal!";
+  } else{
+    result = "no goal";
+  }
+
+  $("#GK_position").html(pc_position);
+  $("#boal_position").html(kicktarget);
+  $("#result").html(result);
+  }
+)
 
 $("#place2").on("click",function(){
+  let pc_position = Math.ceil(Math.random()*6);
   kicktarget = settarget(2);
-  console.log(kicktarget);
+  //console.log(kicktarget);
+  if(kicktarget != pc_position && kicktarget !="枠外"){
+    result = "goal!";
+  } else{
+    result = "no goal";
+  }
+  // console.log(result);
+  // console.log(pc_position);
+  $("#GK_position").html(pc_position);
+  $("#boal_position").html(kicktarget);
+  $("#result").html(result);
 })
 
-console.log(kicktarget);
+$("#place3").on("click",function(){
+  let pc_position = Math.ceil(Math.random()*6);
+  kicktarget = settarget(3);
+  //console.log(kicktarget);
+  if(kicktarget != pc_position && kicktarget !="枠外"){
+    result = "goal!";
+  } else{
+    result = "no goal";
+  }
+  // console.log(result);
+  // console.log(pc_position);
+  $("#GK_position").html(pc_position);
+  $("#boal_position").html(kicktarget);
+  $("#result").html(result);
+})
+
+$("#place4").on("click",function(){
+  let pc_position = Math.ceil(Math.random()*6);
+  kicktarget = settarget(4);
+  //console.log(kicktarget);
+  if(kicktarget != pc_position && kicktarget !="枠外"){
+    result = "goal!";
+  } else{
+    result = "no goal";
+  }
+  // console.log(result);
+  // console.log(pc_position);
+  $("#GK_position").html(pc_position);
+  $("#boal_position").html(kicktarget);
+  $("#result").html(result);
+})
+
+$("#place5").on("click",function(){
+  let pc_position = Math.ceil(Math.random()*6);
+  kicktarget = settarget(5);
+  //console.log(kicktarget);
+  if(kicktarget != pc_position && kicktarget !="枠外"){
+    result = "goal!";
+  } else{
+    result = "no goal";
+  }
+  // console.log(result);
+  // console.log(pc_position);
+  $("#GK_position").html(pc_position);
+  $("#boal_position").html(kicktarget);
+  $("#result").html(result);
+})
+
+$("#place6").on("click",function(){
+  let pc_position = Math.ceil(Math.random()*6);
+  kicktarget = settarget(6);
+  //console.log(kicktarget);
+  if(kicktarget != pc_position && kicktarget !="枠外"){
+    result = "goal!";
+  } else{
+    result = "no goal";
+  }
+  // console.log(result);
+  // console.log(pc_position);
+  $("#GK_position").html(pc_position);
+  $("#boal_position").html(kicktarget);
+  $("#result").html(result);
+})
+
+// console.log(kicktarget);
 
 
 //ボールの絵を表示する
