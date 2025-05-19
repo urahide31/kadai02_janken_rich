@@ -10,12 +10,15 @@
 <body>
 
 <header>
-  <h1>PK対決</h1>
+  <h1 class="headertitle">PK対決</h1>
 </header>
-
+<img src="./img/" alt="">
 <main>
 
 <div class="goalmouse">
+    <div class="scoreboard">
+      <p class="resultboard" id="resultimage"></p>
+  </div>
   <div class="targetrow_up">
     <p class="targetpanel" id="place1">①</p>
     <p class="targetpanel" id="place2">②</p>
@@ -47,7 +50,9 @@
 <footer></footer>
 <script>
 //変数・定数の定義
-const keeper = '<img src="img/keeper.png>"';
+const keeper = '<img src="./img/keeper.png">';
+const goalimg = '<img src="./img/goal.png">';
+const failimg = '<img src="./img/fail.png">';
 let kicktarget; //ける位置
 let result;
 
@@ -70,9 +75,10 @@ $("#place1").on("click",function(){
   let pc_position = Math.ceil(Math.random()*6);
   kicktarget = settarget(1);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    result = "goal!";
+    $("#resultimage").html(goalimg);
+    console.log(goalimg);
   } else{
-    result = "no goal";
+    $("#resultimage").html(failimg);
   }
 
   $("#GK_position").html(pc_position);
@@ -122,8 +128,7 @@ $("#place4").on("click",function(){
   } else{
     result = "no goal";
   }
-  // console.log(result);
-  // console.log(pc_position);
+
   $("#GK_position").html(pc_position);
   $("#boal_position").html(kicktarget);
   $("#result").html(result);

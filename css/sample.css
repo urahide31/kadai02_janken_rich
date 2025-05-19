@@ -5,6 +5,7 @@ body{
     font-size: 32px;
 }
 header{
+    width: 1400px;
     background-color: #fff;
     border-bottom: 1px solid #ccc;
     text-align: center;
@@ -44,12 +45,23 @@ li:hover{
     color:#fff;
 }
 
+.headertitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.scoreboard{
+    height: 240px;
+    display: flex;
+    justify-content: center;
+}
+
 .goalmouse{
     background-image: url(../img/goal.jpeg);
     background-repeat: no-repeat;
     background-size: 1400px;
     height: 750px;
-    padding-top: 240px;
+    /* padding-top: 240px; */
 }
 
 .targetrow_up{
