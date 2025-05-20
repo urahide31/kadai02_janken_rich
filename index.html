@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/sample.css">
 <title>PK</title>
 </head>
-<body>
+<body onload="DefaultSave()">
 
 <header>
   <h1 class="headertitle">PK対決</h1>
@@ -56,6 +56,7 @@ const failimg = '<img src="./img/fail.png">';
 let kicktarget; //ける位置
 let result;
 
+// ボールの行方をセットする関数
 function settarget(p){
   let r = Math.ceil(Math.random()*10);
     if(r>9){
@@ -67,21 +68,35 @@ function settarget(p){
     return kicktarget;
 }
 
+//HTML初期状態を取得しておく
+let defaultHTML;
+function DefaultSave(){
+  defaultHTML = document.body.innerHTML;
+}
+
+// HTMLを初期状態に戻す関数
+function HTMLRestore(){
+  document.body.innerHTML = defaultHTML;
+}
+
 
 
 //クリックイベントとってボールを蹴る位置を決める
 $("#place1").on("click",function(){
+  // HTMLRestore();
+  // console.log(defaultHTML);
   //ゴールキーパーの守備位置を乱数でセット
   let pc_position = Math.ceil(Math.random()*6);
   kicktarget = settarget(1);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    $("#resultimage").html(goalimg);
+    $("#resultimage").html(goalimg).css("background-color","white");
     console.log(goalimg);
   } else{
-    $("#resultimage").html(failimg);
+    $("#resultimage").html(failimg).css("background-color","white");
   }
 
   $("#GK_position").html(pc_position);
+  // $(`#place${pc_position}`).html('GK');
   $("#boal_position").html(kicktarget);
   $("#result").html(result);
   }
@@ -89,6 +104,7 @@ $("#place1").on("click",function(){
 
 $("#place2").on("click",function(){
   let pc_position = Math.ceil(Math.random()*6);
+  console.log(defaultHTML);
   kicktarget = settarget(2);
   //console.log(kicktarget);
   if(kicktarget != pc_position && kicktarget !="枠外"){
