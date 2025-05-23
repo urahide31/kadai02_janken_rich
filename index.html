@@ -108,9 +108,10 @@ $("#place2").on("click",function(){
   kicktarget = settarget(2);
   //console.log(kicktarget);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    result = "goal!";
+    $("#resultimage").html(goalimg).css("background-color","white");
+    console.log(goalimg);
   } else{
-    result = "no goal";
+    $("#resultimage").html(failimg).css("background-color","white");
   }
   // console.log(result);
   // console.log(pc_position);
@@ -124,9 +125,10 @@ $("#place3").on("click",function(){
   kicktarget = settarget(3);
   //console.log(kicktarget);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    result = "goal!";
+    $("#resultimage").html(goalimg).css("background-color","white");
+    console.log(goalimg);
   } else{
-    result = "no goal";
+    $("#resultimage").html(failimg).css("background-color","white");
   }
   // console.log(result);
   // console.log(pc_position);
@@ -140,9 +142,10 @@ $("#place4").on("click",function(){
   kicktarget = settarget(4);
   //console.log(kicktarget);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    result = "goal!";
+   $("#resultimage").html(goalimg).css("background-color","white");
+    console.log(goalimg);
   } else{
-    result = "no goal";
+    $("#resultimage").html(failimg).css("background-color","white");
   }
 
   $("#GK_position").html(pc_position);
@@ -155,9 +158,10 @@ $("#place5").on("click",function(){
   kicktarget = settarget(5);
   //console.log(kicktarget);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    result = "goal!";
+    $("#resultimage").html(goalimg).css("background-color","white");
+    console.log(goalimg);
   } else{
-    result = "no goal";
+    $("#resultimage").html(failimg).css("background-color","white");
   }
   // console.log(result);
   // console.log(pc_position);
@@ -171,9 +175,10 @@ $("#place6").on("click",function(){
   kicktarget = settarget(6);
   //console.log(kicktarget);
   if(kicktarget != pc_position && kicktarget !="枠外"){
-    result = "goal!";
+    $("#resultimage").html(goalimg).css("background-color","white");
+    console.log(goalimg);
   } else{
-    result = "no goal";
+    $("#resultimage").html(failimg).css("background-color","white");
   }
   // console.log(result);
   // console.log(pc_position);
